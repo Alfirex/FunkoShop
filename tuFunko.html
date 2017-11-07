@@ -12,11 +12,13 @@
 		var KeyDown = 115;
 		var KeyLeft = 97;
 		var KeyRight = 100;
+
+		var idCAS;
 		window.onload = function(){
 				document.onkeypress = funcion;
 			}
 		function funcion(evento){
-    var contenedor =  document.getElementById('imagenCont')
+    var contenedor =  document.getElementById(idCAS);
       if (evento.keyCode==KeyUp) {
 				if (contenedor.offsetTop > 0) {
 	        var actual = contenedor.offsetTop;
@@ -75,10 +77,10 @@
 				src=imagen.src;
 				imagenCont=document.getElementById('imagenContC');
 				imagenCont.src=src;
-
-
 				}
-
+				function Presionar(elemento) {
+					idCAS= elemento.id;
+				}
 </script>
 </head>
 <body>
@@ -109,10 +111,10 @@
 			<article class="col-xs-3 col-sm-3 col-md-3 col-lg-3" >
 				<h3>Tu Funko POP Personalizado:</h3>
 				<div id="idContenedorCabeza" style="position:relative;">
-          <img id="imagenCont" src="" alt="" width="200" height="200">
+          <img id="imagenCont" src="" alt="" width="200" height="200" onclick="Presionar(this)">
         </div>
-				<div id="idContenedorCuerpo">
-				<img id="imagenContC" src="" alt="">
+				<div id="idContenedorCuerpo" style="position:relative;">
+				<img id="imagenContC" src="" alt="" onclick="Presionar(this)">
 			</div>
 			</article>
 			<article class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></article>

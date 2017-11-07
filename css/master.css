@@ -47,11 +47,11 @@ footer {
 /**/
 #contenedorDeCabezas{
 	position: relative;
-
+	z-index: 0;
 
 }
 #contenedorDeCuerpo{
-
+	z-index: 0;
 
 
 }
@@ -59,7 +59,15 @@ footer {
 #imagenCont{
 	width: 100px;
 	height: 100px;
-
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#imagenContC{
+	width: 100px;
+	height: 100px;
+	z-index: 1;
 	position: absolute;
 	top: 0;
 	left: 0;
