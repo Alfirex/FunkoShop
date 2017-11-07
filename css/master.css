@@ -46,7 +46,7 @@ footer {
 	}
 /**/
 #contenedorDeCabezas{
-
+	position: relative;
 
 
 }
@@ -55,6 +55,12 @@ footer {
 
 
 }
-hr{
-	color: rgb(143, 124, 59);
+/**/
+#imagenCont{
+	width: 100px;
+	height: 100px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
 }
